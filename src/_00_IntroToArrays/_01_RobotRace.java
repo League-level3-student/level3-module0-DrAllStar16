@@ -25,10 +25,13 @@ public class _01_RobotRace {
 		// 5. use another for loop to iterate through the array and make each robot move
 		// a random amount less than 50.
 		Boolean rRacing = true;
+		
 		while (rRacing) {
 			for (int i = 0; i < bot.length; i++) {
 				if (bot[i].getY() < 50) {
 					rRacing = false;
+					
+					
 				}
 
 			}

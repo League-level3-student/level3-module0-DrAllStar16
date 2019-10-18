@@ -5,15 +5,14 @@ int[] b;
 
 void setup() {
   //2. set the size of your window
-  size(700,700);
+  size(2150,1000);
 
   //3. initialize your array with the built in width variable
-  for(int i = 0; i < width; i ++){
-b[i]= (int)random(height);
-  }
+  b = new int[width];
+ 
   //4. initialize the ints in the array with random numbers
   //   from 0 to the built in height variable
-
+randomiz();
 
   //5. call the noStroke() method
   noStroke();
@@ -24,23 +23,28 @@ void draw() {
 background(123,63,87);
 
   //7. set the color for your graph
-
+fill(42,213,187);
 
   //8. draw a rectangle for each int in your array.
   //   the x value will be the index of the int
   //   the y value will the height variable
   //   the width is 1
   //   the height is negative the value of the int at that element in the array
-
-
+for(int n = 0; n < b.length; n ++){
+rect(n,height,1,-b[n]);
+}
   //9. call the stepSort method
-  
+  stepSort(b);
 
   //10. extract the code that randomizes the array into a method.
   
 
   //11. call the method you made in step 10 when the mouse is pressed
-  
+  if(mousePressed == true){
+     for(int i = 0; i < b.length; i ++){
+b[i]= (int)random(height);
+  }
+  }
 }
 
 void stepSort(int[] arr) {
@@ -51,4 +55,11 @@ void stepSort(int[] arr) {
       arr[i - 1] = t;
     }
   }
+}
+
+void randomiz(){
+   for(int i = 0; i < b.length; i ++){
+b[i]= (int)random(height);
+  }
+  
 }

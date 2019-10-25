@@ -1,18 +1,27 @@
 package _01_Simple_Array_Algorithms;
 
 public class _00_1D_Array_Methods {
-	//1. Complete the method so that it returns the sum of all
+		//1. Complete the method so that it returns the sum of all
 	//   of the integers in the array being passed in
 	public static int sumIntArray(int[] values) {
+		int total=0;
 
-		return 0;
+for (int i = 0; i < values.length; i++) {
+	int j = values[i];
+	total = total+j;
+}
+		return total;
 	}
 	
 	//2. Complete the method so that it returns the average of all
 	//   of the integers in the array being passed in
 	public static double averageIntArray(int[] values) {
-				
-		return 0;
+		double average =0;
+		for (int i = 0; i < values.length; i++) {
+			int j = values[i];
+			average = average+j;
+		}
+		return average/values.length;
 	}
 	
 	

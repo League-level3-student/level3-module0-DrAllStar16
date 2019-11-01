@@ -29,15 +29,30 @@ for (int i = 0; i < values.length; i++) {
 	//   array contains the value specified by the second parameter.
 	//   It should otherwise return false.
 	public static boolean containsIntValue(int[] array, int value) {
-	
-		return false;
+		boolean answer = false;
+	for (int i = 0; i < array.length; i++) {
+		if (array[i]==value) {
+			answer = true;
+		}
+	}
+		return answer;
 	}
 	
 	//4. Complete the method so that it returns the index of the,
 	//   first instance that the specified value occurs in the array.
 	//   If the array does not contain the specified value, it should return -1.
 	public static int getIndex(int[] arr, int value) {
-		
-		return 0;
+		int a= 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i]==value) {
+				a = i;
+				return a;
+			}
+			else {
+				a = -1;
+			}
+			
+		}
+		return a;
 	}
 }

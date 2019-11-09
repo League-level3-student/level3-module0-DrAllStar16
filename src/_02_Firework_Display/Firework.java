@@ -24,8 +24,8 @@ public class Firework {
 		// 3. Iterate through the sparks and initialize each one to a new Spark.
 		// Make each spark start at the middle bottom of the screen.
 		for (int i = 0; i < sparks.length; i++) {
-			sparks[i].x = 955;
-			sparks[i].y = 1080;
+			sparks[i] = new Spark(955,1080);
+		
 		}
 	}
 
@@ -34,8 +34,8 @@ public class Firework {
 		// to their original starting point.
 		for (int j = 0; j < sparks.length; j++) {
 
-			sparks[j].x = 0;
-			sparks[j].y = 0;
+			sparks[j].x = 955;
+			sparks[j].y = 1080;
 		}
 	}
 

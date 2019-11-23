@@ -56,13 +56,13 @@ public class MoreArrayFun {
 	//   in a completely random order. Almost every run of the program should result in a different order.
  
  static	void printRandomOrder(String[] strings) {
-	 ArrayList <String> arrayList = new ArrayList();
+	 ArrayList <String> arrayList = new ArrayList <String>();
 		Random r = new Random();
 		for (int i = 0; i < strings.length; i++) {
 			arrayList.add(strings[i]);
 		} 
-		
-		for (int l = 0; l < arrayList.size(); l++) {
+		int size = arrayList.size();
+		for (int l = 0; l < size; l++) {
 			int thingy = r.nextInt(arrayList.size());
 			System.out.println(arrayList.get(thingy));
 			arrayList.remove(thingy);
